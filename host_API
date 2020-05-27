@@ -20,12 +20,10 @@ def parser(data) :
   return(region,ports,org)
 
 #main
-trt =""
-resultat = ""
 address = "11.22.33.44"
 key  = "myAPIkeyHere"
-trt, resultat = call_shodan(address,key)
-region, ports, org = parser(resultat)
-print("bilan appel : " + str(trt))
+cr, data = call_shodan(address,key)
+region, ports, org = parser(data)
+print("bilan appel : " + str(cr))
 print("L'adresse IP " + address + " appartient à la région de " + str(region) + " et le(s) port(s) : " + str(ports) + " sont visibles")
 print("L'opérateur suivant a été trouvé : " + str(org))
