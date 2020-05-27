@@ -1,2 +1,2 @@
 # shodan-API
-Just a simple test usin host shodan API 
+Just a simple test using host shodan API 
